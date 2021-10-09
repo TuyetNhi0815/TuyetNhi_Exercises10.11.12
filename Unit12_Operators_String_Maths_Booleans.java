@@ -82,6 +82,9 @@ public class Unit12_Operators_String_Maths_Booleans {
         if (number < 2) {
             return false;
         }
+        if (number > 2 && number % 2 == 0) { // remove even number
+            return false;
+        }
         int squareRoot = (int) Math.sqrt(number);
         for (int i = 2; i <= squareRoot; i++) {
             if (number % i == 0) {
@@ -107,15 +110,9 @@ public class Unit12_Operators_String_Maths_Booleans {
     //Bonus print number Prime from num01 to num02
     public static void printPrime(int num01, int num02) {
         for (int i = num01; i <= num02; i++) {
-            if (i == 2) {
+           if (check(i)) {
                 System.out.print(i + " ");
-            }
-            if (i % 2 != 0 ) { //remove even numbers
-                if (check(i)) {
-                    System.out.print(i + " ");
-                }
-            }
+           }
         }
     }
-
 }
